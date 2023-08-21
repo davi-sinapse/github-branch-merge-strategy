@@ -11,7 +11,14 @@ First of all, you must clone this reporitory.
 Now you must configure you local github, there's two of doing so:
 
 1 - Configure each repository: In this case you have to go to the root folder of each repository and run the following code
-´´´
-git config core.hooksPath .git-hooks
+
+´´´bash
+git config core.hooksPath github-branch-merge-strategy
 ´´´
 
+2 - You can configure it globally add the flag --global and the configuration you reflect in every repository
+
+
+´´´bash
+git --global config core.hooksPath github-branch-merge-strategy
+´´´
