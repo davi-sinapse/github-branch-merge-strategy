@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "entrou"
 while read oldrev newrev refname; do
     # Extract the branch name from the refname
     branch_name=${refname#refs/heads/}
