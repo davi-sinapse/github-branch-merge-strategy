@@ -2,7 +2,7 @@
 
 # Verifica a branch onde o commit está sendo efetuado
 target_branch=$(git rev-parse --abbrev-ref HEAD)
-
+echo "$target_branch"
 # Lista de branches bloqueadas
 blocked_branches=("main" "staging")
 
