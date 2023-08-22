@@ -8,7 +8,7 @@ blocked_branches=("main" "staging")
 echo "$blocked_branches"
 
 # Check if the pushed branch is blocked
-if [[ "${blocked_branches[*]}" == "$target_branch" ]]; then
+if [[ "${blocked_branches[@]}" == "$target_branch" ]]; then
 	echo "Merge na branch $target_branch não é permitido"
 	exit 1
 fi
