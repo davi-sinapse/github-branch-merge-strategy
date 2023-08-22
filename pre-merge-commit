@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Verifica a branch onde o commit está sendo efetuado
-branch_name=$(git rev-parse --abbrev-ref HEAD)
+target_branch=$(git rev-parse --abbrev-ref HEAD)
 
 # Lista de branches bloqueadas
 blocked_branches=("main" "staging")
 
 # Check if the pushed branch is blocked
-if [[ "${blocked_branches[@]}" =~ "$branch_name" ]]; then
-	echo "Commit na branch $branch_name não é permitido"
+if [[ "${blocked_branches[@]}" == "$target_branch" ]]; then
+	echo "Merge na branch $branch_name não é permitido"
 	exit 1
 fi
